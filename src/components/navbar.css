@@ -1,0 +1,21 @@
+a{
+  text-decoration: none;
+  /* color: black; */
+}
+
+li{
+  list-style: none;
+}
+
+.facebook{
+  color: #007dffcc;
+}
+.insta{
+  color: #ff00a5b5;
+}
+.linkedin{
+  color: #0045809e;
+}
+.socialmedia a{
+  font-size : 1.4rem;
+}
