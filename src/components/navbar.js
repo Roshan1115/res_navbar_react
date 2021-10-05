@@ -2,25 +2,27 @@ import React, { useState } from 'react'
 import './navbar.css'
 import { FaFacebookSquare, FaInstagramSquare,FaLinkedinIn } from 'react-icons/fa'
 import {GiHamburgerMenu} from 'react-icons/gi'
+import {NavLink} from 'react-router-dom'
 
 const Navbar = () => {
   const [showMediaIcon, setMediaIcon] = useState(false)
   return (
     <>
       <nav className="main-nav">
-        {/* first div  */}
         <div className="logo">
-          <span>RoshanBishi</span>
-          {/* <span>Bishi</span> */}
+          <h2>
+          <span>R</span>oshan
+          <span>B</span>ishi
+          </h2>
         </div>
 
         {/* 2nd div  */}
         <div className={showMediaIcon ? "mobile-menu-link" : "menu-link"}>
           <ul>
-            <li><a href="#" className="home">Home</a></li>
-            <li><a href="#" className="about">About</a></li>
-            <li><a href="#" className="services">Services</a></li>
-            <li><a href="#" className="contact">Contact</a></li>
+            <li><NavLink to="/">Home</NavLink> </li>
+            <li><NavLink to="/about">About</NavLink> </li>
+            <li><NavLink to="/services">Services</NavLink> </li>
+            <li><NavLink to="/contact">Contact</NavLink> </li>
           </ul>
         </div>
 
@@ -28,29 +30,24 @@ const Navbar = () => {
         <div className="social-media">
           <ul className="social-media-desktop" >
             <li>
-              <a href="#"><FaFacebookSquare className="facebook"/></a>
+              <a href="https://www.facebook.com/roshan.bishi" rel="noreferrer" target="_blank" ><FaFacebookSquare className="facebook" /></a>
             </li>
             <li>
-              <a href="#"><FaInstagramSquare className="instagram" /></a>
+              <a href="https://www.instagram.com/roshan.bishi/" rel="noreferrer" target="_blank" ><FaInstagramSquare className="instagram"/></a>
             </li>
             <li>
-              <a href="#"><FaLinkedinIn className="linkedin" /></a>
+              <a href="https://www.linkedin.com/in/roshanbishi/" rel="noreferrer" target="_blank" ><FaLinkedinIn className="linkedin"/></a>
             </li>
           </ul>
 
           {/* hamburger */}
           <div className="hamburger-menu">
-            <a href="#" onClick={() => setMediaIcon(!showMediaIcon)}>
+            <a herf="#" onClick={() => setMediaIcon(!showMediaIcon)}>
               <GiHamburgerMenu />
             </a>
           </div>
         </div>
       </nav>
-
-      <section className="hero-section">
-        <p>Welcome to</p>
-        <h1>Roshan's site</h1>
-      </section>
     </>
   )
 }
